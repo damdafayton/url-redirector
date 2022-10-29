@@ -4,7 +4,7 @@ Dockerized express app to register a Url which enables to redirection to that Ur
 
 The base url is registered with `redirectUrl` query parameter like this;
 
-`http://ec2-3-236-152-196.compute-1.amazonaws.com:3030/oaysus/damda?redirectUrl=https://936b-185-111-116-221.eu.ngrok.io`
+`http://ec2-1-335-124-976.compute-1.amazonaws.com:3030/oaysus/damda?redirectUrl=https://936b-185-111-116-221.eu.ngrok.io`
 
 The app can be used for more than one project and more than one developer by the path structure.
 
