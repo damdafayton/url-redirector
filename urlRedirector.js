@@ -1,6 +1,6 @@
-const fs = require("fs");
+import fs from "fs";
 
-const data = require(`./${DATABASE_FILENAME}`);
+import data from `./${DATABASE_FILENAME}`;
 
 (function () {
   console.log("redirect script loaded");
