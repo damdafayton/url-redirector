@@ -13,7 +13,9 @@ const url = new URL(location);
 const parsedPath = url.pathname.split("/");
 const [project, user] = parsedPath;
 
-if (!project || !user) return;
+if (!project || !user) {
+  return;
+}
 
 const redirectUrl = url.searchParams.get("redirectUrl");
 
