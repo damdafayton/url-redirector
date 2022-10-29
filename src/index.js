@@ -1,5 +1,4 @@
 var express = require("express");
-const { type } = require("os");
 var app = express();
 
 const port = process.env.PORT || 3020;
