@@ -1,3 +1,5 @@
+console.log("redirect script loaded");
+
 const fs = require("fs");
 
 const DATABASE_FILENAME = "redirectDatabase.json";
