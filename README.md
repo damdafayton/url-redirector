@@ -1,6 +1,6 @@
 # url-redirector
 
-Dockerized express app to register a Url which enables to redirection to that Url with given path.
+Dockerized express app to register a Url which enables redirecting to that Url with a given path.
 
 The base url is registered with `redirectUrl` query parameter like this;
 
