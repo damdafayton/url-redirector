@@ -1,11 +1,10 @@
 import fs from "fs";
 
+const DATABASE_FILENAME = "redirectDatabase.json";
 import data from `./${DATABASE_FILENAME}`;
 
 (function () {
   console.log("redirect script loaded");
-
-  const DATABASE_FILENAME = "redirectDatabase.json";
 
   console.log({ location });
 
