@@ -13,7 +13,7 @@ The app can be used for more than one project and more than one developer by the
 
 To redirect any path to the registered url `redirectPath` parameter must be entered to the url.
 
-`http://ec2-3-236-152-196.compute-1.amazonaws.com:3030/oaysus/damda?redirectPath=/some-path?someParam=null`
+`http://ec2-1-335-124-976.compute-1.amazonaws.com:3030/oaysus/damda?redirectPath=/some-path?someParam=null`
 
 redirects to 
 
