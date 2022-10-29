@@ -6,7 +6,7 @@ The base url is registered with `redirectUrl` query parameter like this;
 
 `http://ec2-1-335-124-976.compute-1.amazonaws.com:3030/oaysus/damda?redirectUrl=https://936b-185-111-116-221.eu.ngrok.io`
 
-The app can be used for more than one project and more than one developer by the path structure.
+The app can be used for more than one project and with more than one developer by the path structure.
 
 - First path is used for naming the project; `oaysus` in the example
 - Second path is used for naming the developer; `damda` in the example
