@@ -1,7 +1,10 @@
 import fs from "fs";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
 
 const DATABASE_FILENAME = "redirectDatabase.json";
-import data from `./${DATABASE_FILENAME}`;
+const data = require(`./${DATABASE_FILENAME}`);
 
 (function () {
   console.log("redirect script loaded");
