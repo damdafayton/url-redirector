@@ -38,7 +38,9 @@ module.exports.urlRedirector = (location) => {
 
   if (redirectPath) {
     const redirectUrl = data[project][user];
-    return redirectUrl + redirectPath;
+    url.searchParams.delete("redirectPath");
+
+    return redirectUrl + redirectPath + url.search;
   }
 
   return { message: "Wrong query parameter." };
