@@ -1,11 +1,11 @@
+const fs = require("fs");
+
+const data = require(`./${DATABASE_FILENAME}`);
+
 (function () {
   console.log("redirect script loaded");
 
-  const fs = require("fs");
-
   const DATABASE_FILENAME = "redirectDatabase.json";
-
-  const data = require(`./${DATABASE_FILENAME}`);
 
   console.log({ location });
 
