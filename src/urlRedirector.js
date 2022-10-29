@@ -38,7 +38,9 @@ module.exports.urlRedirector = (location) => {
 
   if (redirectPath) {
     const redirectUrl = data[project][user];
-    url.searchParams.delete("redirectPath");
+
+    // Can not delete because of hmac verification on shopify
+    // url.searchParams.delete("redirectPath");
 
     return redirectUrl + redirectPath + url.search;
   }
