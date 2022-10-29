@@ -1,40 +1,45 @@
-// import fs from "fs";
-import { createRequire } from "module";
-
-const require = createRequire(import.meta.url);
+const fs = require("fs");
 
 const DATABASE_FILENAME = "redirectDatabase.json";
 const data = require(`./${DATABASE_FILENAME}`);
 
-const fs = require("fs");
-
-(function () {
+module.exports.urlRedirector = (location) => {
   console.log("redirect script loaded");
 
   console.log({ location });
 
   const url = new URL(location);
 
-  const parsedPath = url.pathname.split("/");
+  const parsedPath = url.pathname.slice(1).split("/");
+
   const [project, user] = parsedPath;
 
-  if (!project || !user) return;
+  if (!project || !user) return { message: "Wrong path." };
 
   const redirectUrl = url.searchParams.get("redirectUrl");
 
   console.log({ project, user, redirectUrl });
 
   if (redirectUrl) {
+    data[project] = data[project] || {};
+
     data[project][user] = redirectUrl;
 
     fs.writeFileSync(DATABASE_FILENAME, JSON.stringify(data));
-    return;
+
+    console.log(
+      `Calls to /${project}/${user}?redirectPath=/example-path will be redirected to ${redirectUrl}/example-path`
+    );
+
+    return true;
   }
 
   const redirectPath = url.searchParams.get("redirectPath");
 
   if (redirectPath) {
     const redirectUrl = data[project][user];
-    window.location = redirectUrl + redirectPath;
+    return redirectUrl + redirectPath;
   }
-})();
+
+  return { message: "Wrong query parameter." };
+};
